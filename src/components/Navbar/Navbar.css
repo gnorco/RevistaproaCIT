@@ -1,0 +1,63 @@
+.labNav {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  z-index: 100;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.5rem;
+  justify-items: center;
+}
+
+.labNav a {
+  text-decoration: none;
+  color: #212121;
+  padding: 0.5rem 0.8rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 180px;
+}
+
+.labNav a:hover,
+.labNav a.active {
+  background-color: #1565C0;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.labNav a span {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .labNav {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    padding: 0.8rem;
+  }
+  
+  .labNav a {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .labNav {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .labNav a {
+    max-width: none;
+  }
+}
