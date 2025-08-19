@@ -1,0 +1,5 @@
+.fondo{
+    width: 100px;
+    height: 100vh;
+    background: url('../public/images.jpeg') no-repeat;
+}
