@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import { Button } from "./ui/button"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -35,25 +34,28 @@ export default function Header() {
 
           {/* Search and Subscribe */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button
-              variant="outline"
-              className="border-2 bg-transparent"
-              style={{ borderColor: "#41599f", color: "#41599f" }}
+            <button
+              className="border-2 border-[#41599f] bg-transparent text-[#41599f] px-4 py-2 rounded"
             >
               Buscar
-            </Button>
-            <Button className="text-white" style={{ backgroundColor: "#15274b" }}>
+            </button>
+            <button
+              className="bg-[#15274b] text-white px-4 py-2 rounded"
+            >
               Suscribirse
-            </Button>
+            </button>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <Button variant="ghost" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            <button
+              className="p-2 rounded-md hover:bg-gray-200"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
-            </Button>
+            </button>
           </div>
         </div>
 
@@ -74,12 +76,16 @@ export default function Header() {
                 [CATEGORÍA 4]
               </a>
               <div className="flex flex-col space-y-2 pt-4">
-                <Button variant="outline" className="w-full bg-transparent">
+                <button
+                  className="w-full border-2 border-[#41599f] bg-transparent text-[#41599f] px-4 py-2 rounded"
+                >
                   Buscar
-                </Button>
-                <Button className="w-full text-white" style={{ backgroundColor: "#15274b" }}>
+                </button>
+                <button
+                  className="w-full bg-[#15274b] text-white px-4 py-2 rounded"
+                >
                   Suscribirse
-                </Button>
+                </button>
               </div>
             </div>
           </div>
