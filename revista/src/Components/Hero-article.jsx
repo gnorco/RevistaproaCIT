@@ -27,12 +27,11 @@ export default function HeroArticle() {
           </div>
 
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            [TÍTULO DEL ARTÍCULO PRINCIPAL]
+            Revista ProA 2025
           </h1>
 
           <p className="text-xl text-gray-200 mb-8 leading-relaxed">
-            [DESCRIPCIÓN O EXTRACTO DEL ARTÍCULO PRINCIPAL. Aquí puedes poner un resumen atractivo que invite a leer
-            más.]
+            Explorá, leé y disfrutá del contenido que preparamos especialmente para tu visita.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
@@ -46,10 +45,6 @@ export default function HeroArticle() {
             >
               Ver Más
             </button>
-          </div>
-
-          <div className="mt-8 flex items-center text-gray-300">
-            <span className="text-sm">Por [AUTOR] • [FECHA] • [TIEMPO DE LECTURA] min</span>
           </div>
         </div>
       </div>

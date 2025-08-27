@@ -12,23 +12,23 @@ export default function Header() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <h1 className="text-2xl font-bold" style={{ color: "#15274b" }}>
-              [NOMBRE DE TU REVISTA]
+              Revista Proa 2025
             </h1>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             <a href="#" className="text-gray-700 hover:text-blue-600 font-medium">
-              [CATEGORÍA 1]
+              Juegos olimpicos
             </a>
             <a href="#" className="text-gray-700 hover:text-blue-600 font-medium">
-              [CATEGORÍA 2]
+              Cocina
             </a>
             <a href="#" className="text-gray-700 hover:text-blue-600 font-medium">
-              [CATEGORÍA 3]
+              Videojuegos
             </a>
             <a href="#" className="text-gray-700 hover:text-blue-600 font-medium">
-              [CATEGORÍA 4]
+              CATEGORÍA 4
             </a>
           </nav>
 

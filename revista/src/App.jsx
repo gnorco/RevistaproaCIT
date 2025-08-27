@@ -3,6 +3,7 @@ import HeroArticle from "./Components/Hero-article"
 import ArticleGrid from "./Components/Article-grid"
 import Sidebar from "./Components/Sidebar"
 import Footer from "./Components/Footer"
+import ScrollToTopButton from "./Components/ScrollToTopButton"
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <ScrollToTopButton />
       </main>
       <Footer />
     </div>
