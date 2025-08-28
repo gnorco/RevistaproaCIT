@@ -1,8 +1,14 @@
+import { Link } from "react-router-dom";
+
 export default function HeroArticle() {
   return (
     <section className="relative h-[70vh] overflow-hidden">
       <div className="absolute inset-0">
-        <img src="/modern-magazine-hero-image.png" alt="Artículo principal" className="w-full h-full object-cover" />
+        <img
+          src="/public/imgHeroArticle.jpg"
+          alt="Artículo principal"
+          className="w-full h-full object-cover"
+        />
         <div
           className="absolute inset-0"
           style={{
@@ -13,27 +19,26 @@ export default function HeroArticle() {
 
       <div className="relative w-full h-full flex items-center px-4 md:px-8">
         <div className="w-full">
-          <div className="mb-4">
-
-          </div>
-
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">Revista ProA 2025</h1>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            Revista ProA 2025
+          </h1>
 
           <p className="text-xl text-gray-200 mb-8 leading-relaxed">
             Explorá, leé y disfrutá del contenido que preparamos especialmente para tu visita.
-            Esto no es solo una revista, es un espacio para soñar, experimentar y compartir. <br/> Aquí los jóvenes dan vida a sus descubrimientos y contagian su pasión por la ciencia y la tecnología.
+            Esto no es solo una revista, es un espacio para soñar, experimentar y compartir. <br />
+            Aquí los jóvenes dan vida a sus descubrimientos y contagian su pasión por la ciencia y la tecnología.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="text-white font-semibold px-6 py-3 rounded-lg bg-[#7b91fe] hover:bg-[#6b81ee] transition-colors">
+            <Link
+              to="/sobre-la-revista"
+              className="text-white font-semibold px-6 py-3 rounded-lg bg-[#7b91fe] hover:bg-[#6b81ee] transition-colors text-center"
+            >
               Leer Artículo
-            </button>
-            <button className="text-white border-2 border-white px-6 py-3 rounded-lg bg-transparent hover:bg-white hover:text-gray-900 transition-colors">
-              Ver Más
-            </button>
+            </Link>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

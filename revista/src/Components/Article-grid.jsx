@@ -1,35 +1,52 @@
+// src/components/ArticleGrid.jsx
+import React from "react";
+import { useNavigate } from "react-router-dom";
+
 export default function ArticleGrid() {
+  const navigate = useNavigate();
+
   const articles = [
     {
       id: 1,
       category: "Juegos Olimpicos",
       title: "Los juegos olimpicos: Historia, Ciencia y Futuro ",
       excerpt: "Un recorrido por el origen, la evolución y el presente de los Juegos Olímpicos, su relación con la ciencia y la tecnología, la participación argentina y una entrevista exclusiva a un referente del pádel.",
-      image: "../public/banner_olimpicos.webp",
+      image: "/banner_olimpicos.webp",
+      link: "/juegos-olimpicos", // Página a redirigir
     },
     {
       id: 2,
-      category: "Entretenimiento",
-      title: "Espectaculos y Diversión: Música, Ciencia y Tecnología",
-      excerpt: "Un recorrido por los principales géneros musicales, sus influencias y su relación con la ciencia y la innovación tecnológica. Desde la electrónica hasta el trap latino, analizamos cómo la tecnología transformó la forma de crear, distribuir y vivir la música. También exploramos los festivales más importantes de Argentina y los referentes que marcaron historia.",
-      image: "../public/espectaculo.webp",
+      category: "Entrevistas",
+      title: "Entrevistas",
+      excerpt: "Exploramos entrevistas exclusivas con expertos, innovadores y referentes de distintos campos, donde comparten sus experiencias, conocimientos y consejos. Una mirada única que conecta al lector con la ciencia, la tecnología y la cultura.",
+      image: "/banner-entrevista.webp",
+      link: "", // Página a redirigir
     },
     {
       id: 3,
       category: "Cocina",
       title: "Innovación en la cocina",
       excerpt: "Descubrí cómo la gastronomía se transformó con la ciencia y la tecnología, desde utensilios tradicionales hasta técnicas avanzadas como cocina molecular, impresión 3D de alimentos y fermentación. Además, conocerás la visión de chefs y expertos sobre cómo la innovación revoluciona la experiencia gastronómica y el aprendizaje culinario.",
-      image: "../public/cocina-banner.webp",
+      image: "/cocina-banner.webp",
+      link: "/cocina",
     },
     {
       id: 4,
       category: "Videojuegos",
       title: "Videojuegos: Sentimientos, Cultura e Innovación",
       excerpt: "Los videojuegos no son solo entretenimiento: son un lenguaje único que combina imágenes, música e interacción para transmitir emociones, contar historias y conectar personas. En esta sección exploramos la historia del gaming, la industria argentina, avances tecnológicos, la educación y la cultura gamer. Además, incluimos entrevistas con programadores y jugadores que muestran cómo los videojuegos impactan la creatividad, la enseñanza y la vida cotidiana.",
-
-      image: "../public/Juegos.jpg",
+      image: "/Juegos.jpg",
+      link: "/videojuegos",
     },
-  ]
+  ];
+
+  const handleClick = (link) => {
+    navigate(link);
+    // Scroll suave después de redirigir
+    setTimeout(() => {
+      window.scrollTo({ top: 150, behavior: "smooth" });
+    }, 100); // un pequeño delay para asegurar que la página cargue
+  };
 
   return (
     <section className="w-full">
@@ -45,6 +62,7 @@ export default function ArticleGrid() {
           <article
             key={article.id}
             className="group cursor-pointer bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100"
+            onClick={() => handleClick(article.link)}
           >
             <div className="aspect-video overflow-hidden">
               <img
@@ -77,5 +95,5 @@ export default function ArticleGrid() {
         ))}
       </div>
     </section>
-  )
+  );
 }
