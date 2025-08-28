@@ -10,11 +10,19 @@ export default function Header() {
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold" style={{ color: "#15274b" }}>
-              Revista Proa 2025
-            </h1>
-          </div>
+        <div className="flex items-center space-x-2 flex-shrink-0">
+          <h1 className="text-2xl font-bold" style={{ color: "#15274b" }}>
+            Revista Proa 2025
+          </h1>
+        <img
+          src="../public/logo-header.png"
+          alt=""
+          className="w-15 h-7 rounded-lg object-cover"
+        />
+</div>
+
+
+
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
@@ -31,14 +39,6 @@ export default function Header() {
               Entretenimiento
             </a>
           </nav>
-
-          {/* Search and Subscribe */}
-          <div className="hidden md:flex items-center space-x-4">
-            <button className="border-2 border-[#41599f] bg-transparent text-[#41599f] px-4 py-2 rounded">
-              Buscar
-            </button>
-            <button className="bg-[#15274b] text-white px-4 py-2 rounded">Suscribirse</button>
-          </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
