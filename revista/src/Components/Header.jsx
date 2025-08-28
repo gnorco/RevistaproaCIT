@@ -55,23 +55,17 @@ export default function Header() {
           <div className="md:hidden py-4 border-t border-gray-200">
             <div className="flex flex-col space-y-4">
               <a href="#" className="text-gray-700 hover:text-blue-600 font-medium">
-                [CATEGORÍA 1]
+                Juegos Olimpicos
               </a>
               <a href="#" className="text-gray-700 hover:text-blue-600 font-medium">
-                [CATEGORÍA 2]
+                Cocina
               </a>
               <a href="#" className="text-gray-700 hover:text-blue-600 font-medium">
-                [CATEGORÍA 3]
+                Videojuegos
               </a>
               <a href="#" className="text-gray-700 hover:text-blue-600 font-medium">
-                [CATEGORÍA 4]
+                Entretenimiento
               </a>
-              <div className="flex flex-col space-y-2 pt-4">
-                <button className="w-full border-2 border-[#41599f] bg-transparent text-[#41599f] px-4 py-2 rounded">
-                  Buscar
-                </button>
-                <button className="w-full bg-[#15274b] text-white px-4 py-2 rounded">Suscribirse</button>
-              </div>
             </div>
           </div>
         )}

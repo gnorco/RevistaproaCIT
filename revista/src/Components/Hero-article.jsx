@@ -21,6 +21,7 @@ export default function HeroArticle() {
 
           <p className="text-xl text-gray-200 mb-8 leading-relaxed">
             Explorá, leé y disfrutá del contenido que preparamos especialmente para tu visita.
+            Esto no es solo una revista, es un espacio para soñar, experimentar y compartir. <br/> Aquí los jóvenes dan vida a sus descubrimientos y contagian su pasión por la ciencia y la tecnología.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
