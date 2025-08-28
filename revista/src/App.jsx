@@ -5,19 +5,21 @@ import Sidebar from "./Components/Sidebar"
 import Footer from "./Components/Footer"
 import ScrollToTopButton from "./Components/ScrollToTopButton"
 
-export default function Home() {
+export default function App() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white w-full overflow-x-hidden">
       <Header />
-      <main>
+      <main className="w-full">
         <HeroArticle />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div className="lg:col-span-2">
-              <ArticleGrid />
-            </div>
-            <div className="lg:col-span-1">
-              <Sidebar />
+        <div className="w-full py-12">
+          <div className="w-full px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              <div className="lg:col-span-2">
+                <ArticleGrid />
+              </div>
+              <div className="lg:col-span-1">
+                <Sidebar />
+              </div>
             </div>
           </div>
         </div>
